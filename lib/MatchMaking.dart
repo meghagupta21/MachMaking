@@ -69,7 +69,26 @@ class _MatchMakingFormState extends State<MatchMakingForm> {
                     ],
                   ),
                   SizedBox(height: 10),
-                  _buildTextFieldWithDropDown('Birth Place', _birthPlaceControllerBoy),
+                  Text('Select Birth Place'),
+                  SelectState(
+                    onCountryChanged: (value) {
+                      setState(() {
+                        countryValue = value;
+                      });
+                    },
+                    onStateChanged:(value) {
+                      setState(() {
+                        stateValue = value;
+                      });
+                    },
+                    onCityChanged:(value) {
+                      setState(() {
+                        cityValue = value;
+                      });
+                    },
+
+                  ),
+                 // _buildTextFieldWithDropDown('Birth Place', _birthPlaceControllerBoy),
 
                 ],
               ),
@@ -117,9 +136,26 @@ class _MatchMakingFormState extends State<MatchMakingForm> {
                     ],
                   ),
                   SizedBox(height: 10),
+                  Text('Select Birth Place'),
+                  SelectState(
+                    onCountryChanged: (value) {
+                      setState(() {
+                        countryValue = value;
+                      });
+                    },
+                    onStateChanged:(value) {
+                      setState(() {
+                        stateValue = value;
+                      });
+                    },
+                    onCityChanged:(value) {
+                      setState(() {
+                        cityValue = value;
+                      });
+                    },
 
-
-                  _buildTextFieldWithDropDown('Birth Place', _birthPlaceControllerGirl),
+                  ),
+                //  _buildTextFieldWithDropDown('Birth Place', _birthPlaceControllerGirl),
 
                 ],
               ),
